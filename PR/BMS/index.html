@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="favicon" href="images/favicon.webp">
+  <title>BookMyShow</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="top-left">
+      <div class="logo">
+        <div class="mark">B</div>
+        <div class="brand">
+          <div class="brand-title">BookMyShow</div>
+          <div class="brand-sub">replace images as needed</div>
+        </div>
+      </div>
+
+      <div class="search">
+        <input id="searchInput" placeholder="Search movies, events, plays, sports..." />
+        <button class="btn" id="searchBtn">Search</button>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <div class="city">
+        City:
+        <select id="citySelect">
+          <option>Mumbai</option><option>Delhi</option><option>Bengaluru</option>
+        </select>
+      </div>
+
+      <button class="btn">Sign in</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-card">
+        <div class="carousel" id="carousel">
+          <div class="slides" id="slides"></div>
+          <div class="dots" id="dots"></div>
+        </div>
+      </div>
+
+      <aside class="quick">
+        <div class="quick-head">
+          <strong>Book for today</strong>
+          <span class="muted">Showtimes updated</span>
+        </div>
+
+        <div class="quick-list">
+          <div class="quick-item">
+            <div>
+              <div class="q-title">Avatar: The Way of Water</div>
+              <div class="q-meta">PVR: INOX, 7:30 PM</div>
+            </div>
+            <button class="btn small" data-action="select">Select</button>
+          </div>
+
+          <div class="quick-item">
+            <div>
+              <div class="q-title">Interstellar</div>
+              <div class="q-meta">INOX: 9:45 PM</div>
+            </div>
+            <button class="btn small" data-action="select">Select</button>
+          </div>
+
+          <div class="quick-foot muted">Delivery & offers available</div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section">
+      <h3>Now Showing</h3>
+      <div class="movies" id="moviesGrid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <strong>BookMyShow UI</strong>
+        <div class="muted small">A movies/events home page layout.</div>
+      </div>
+      <div class="muted small">not a real ticketing site</div>
+    </div>
+  </footer>
+
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true">
+      <div class="modal-head">
+        <strong id="modalTitle">Trailer</strong>
+        <button id="modalClose" class="modal-close" aria-label="Close">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="player-placeholder">Trailer player </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js" defer></script>
+</body>
+</html>
